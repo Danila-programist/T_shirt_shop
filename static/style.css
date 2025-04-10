@@ -47,3 +47,17 @@ footer {
     background: #eee;
     margin-top: 2em;
 }
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+.pagination a,
+.pagination strong {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+.pagination strong {
+    font-weight: bold;
+}

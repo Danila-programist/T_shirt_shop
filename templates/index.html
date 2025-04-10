@@ -24,6 +24,24 @@
     {% endfor %}
 </div>
 
+<div class="pagination">
+    {% if page > 1 %}
+        <a href="/?page={{ page - 1 }}">&laquo; Назад</a>
+    {% endif %}
+
+    {% for p in range(1, pages + 1) %}
+        {% if p == page %}
+            <strong>{{ p }}</strong>
+        {% else %}
+            <a href="/?page={{ p }}">{{ p }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page < pages %}
+        <a href="/?page={{ page + 1 }}">Вперёд &raquo;</a>
+    {% endif %}
+</div>
+
 <p>
     Наш магазин постоянно обновляет коллекцию, чтобы радовать вас новыми идеями и трендовыми решениями. Наша цель — создать атмосферу, в которой каждая майка превращается в произведение искусства.
 </p>
