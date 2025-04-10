@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - T shirt shop{% endblock %}
+
+{% block content %}
+<h2>Наши майки</h2>
+<div class="product-grid">
+    {% for p in products %}
+    <div class="product-card">
+        <img src="{{ p.image }}" alt="{{ p.name }}">
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.price }} руб.</p>
+        <a href="/product/{{ p.id }}">Подробнее</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
